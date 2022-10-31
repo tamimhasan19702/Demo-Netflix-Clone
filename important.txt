@@ -1,0 +1,16 @@
+API key
+
+"c2f70e3771bb638e351a05c7519dc169"
+
+Example Api request
+
+"https://api.themoviedb.org/3/movie/550?api_key=c2f70e3771bb638e351a05c7519dc169"
+
+
+NPM command
+
+npm install -g firebase-tools
+
+firebase login
+
+firebase init
