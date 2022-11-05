@@ -6,7 +6,7 @@ function Row({title}) {
 
    // a sinppet of code which runs based on a specific conditions
     useEffect(() => {
-  // if [], run once when the row loads and don't run again test
+  // if [], run once when the row loads and don't run again test test2
     }, []);
 
 
