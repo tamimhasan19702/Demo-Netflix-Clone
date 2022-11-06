@@ -1,13 +1,17 @@
-import React, {useState, useEffect } from 'react'
+import React, {useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Row({title}) {
 
     const [movies, setMovies] = useState([]);
 
    // a sinppet of code which runs based on a specific conditions
+
     useEffect(() => {
-  // if [], run once when the row loads and don't run again test test2
-    }, []);
+
+  // if [], run once when the row loads and don't run again 
+
+    }, [movies]);
 
 
   return (
