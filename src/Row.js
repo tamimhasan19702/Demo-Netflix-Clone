@@ -14,23 +14,29 @@ function Row({title, fetchUrl}) {
 
      async function fetchData(){
      const request = await axios.get(fetchUrl);
-    //  setMovies(request.data.results);
-     console.log(request);
+     setMovies(request.data.results);
      return request;
      }
      fetchData();
     }, [fetchUrl]);
 
-    // console.log(movies)
+    console.log(movies)
 
   return (
     <div className='row'>
         
-        {/* title */}
+    
         <h2>{title}</h2>
 
         <div className="row-posters">
           
+          {movies.map(movie => (
+            <img 
+            src={movie.poster_path} 
+            alt={movie.name} />
+            ))}
+
+
         </div>
         {/* container -> posters */}
           
@@ -38,4 +44,4 @@ function Row({title, fetchUrl}) {
   )
 }
 
-export default Row
+export default Row 
