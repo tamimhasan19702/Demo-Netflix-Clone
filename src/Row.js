@@ -11,7 +11,11 @@ function Row({title}) {
 
   // if [], run once when the row loads and don't run again 
 
-    }, [movies]);
+     async function fetchData(){
+     const request = await
+     }
+     fetchData();
+    }, []);
 
 
   return (
