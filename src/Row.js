@@ -1,5 +1,6 @@
 import React, {useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from './axios';
+
 
 function Row({title, fetchUrl}) {
 
@@ -13,21 +14,24 @@ function Row({title, fetchUrl}) {
 
      async function fetchData(){
      const request = await axios.get(fetchUrl);
-     setMovies(request.data.results);
-     console.log(request.data.results);
+    //  setMovies(request.data.results);
+     console.log(request);
      return request;
      }
      fetchData();
     }, [fetchUrl]);
 
-    console.log(movies)
+    // console.log(movies)
 
   return (
-    <div>
+    <div className='row'>
         
         {/* title */}
         <h2>{title}</h2>
 
+        <div className="row-posters">
+          
+        </div>
         {/* container -> posters */}
           
     </div>
