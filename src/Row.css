@@ -18,9 +18,18 @@
     max-height: 100px;
     margin-right: 10px;
     transition: transform 450ms;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .row-poster:hover{
   transform: scale(1.08);
+}
+
+.row-posterLarge{
+  max-height: 250px;
+}
+
+.row-posterLarge:hover{
+  transform: scale(1.09);
+  opacity: 1;
 }
