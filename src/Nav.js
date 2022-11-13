@@ -4,7 +4,7 @@ import './Nav.css';
 function Nav() {
   return (
     <div className='nav'>
-   
+
     <img 
     className='nav-logo' 
     src="https://www.logo.wine/a/logo/Netflix/Netflix-Logo.wine.svg" 
