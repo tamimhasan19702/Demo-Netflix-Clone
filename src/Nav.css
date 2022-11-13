@@ -7,10 +7,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 35px;
-    overflow-x: hidden;
-    background-color: #000;
+    overflow-x: hidden;  
     z-index: 1;
 }
+
+.nav-black{
+    transition: all 0.4s;
+    background-color: #000;
+}
+
 .nav-logo{
     position: fixed;
     width: 100px;

@@ -1,7 +1,8 @@
-import React ,{useEffect} from 'react';
+import React ,{useEffect, useState} from 'react';
 import './Nav.css';
 
 function Nav() {
+  const [show, handleShow] = useState(false)
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -15,7 +16,7 @@ function Nav() {
   }, []);
 
   return (
-    <div className='nav'>
+    <div className={`nav ${show && 'nav-black'}`}>
 
     <img 
     className='nav-logo' 
