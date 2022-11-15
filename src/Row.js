@@ -1,6 +1,6 @@
-import movieTrailer from 'movie-trailer';
 import React, {useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
+import movieTrailer from 'movie-trailer';
 import axios from './axios';
 import './Row.css';
 
@@ -33,19 +33,18 @@ function Row({title, fetchUrl, isLargeRow}) {
       playerVars: {
         //https://developers.google.com/youtube/player_parameters
         autoplay: 1,
-      }
-    }
+      },
+    };
 
     const handleClick = (movie) => {
       if(trailerUrl){
-        setTrailerUrl("");
+        setTrailerUrl('');
       }else{
         movieTrailer(movie?.name || "")
         .then((url) => {
-          const urlParams =new URLSearchParams(new URL(url).search);
+          const urlParams = new URLSearchParams(new URL(url).search);
           setTrailerUrl(urlParams.get('v'));
-        })
-        .catch((error) => console.log(error));
+        }).catch(error => console.log(error));
       }
     };
 
@@ -70,7 +69,8 @@ function Row({title, fetchUrl, isLargeRow}) {
         </div>
         
        {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
-          
+
+       {/* <YouTube videoId='nJT--MlnCBk&list=RDO3SyEDO0K9U' opts={opts}/>           */}
     </div>
   )
 }
